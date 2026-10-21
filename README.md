@@ -19,8 +19,6 @@ Documentation of my work from the **Physical Verification** course using the Sky
     - [L4 - Creating Symbol and Exporting Schematic in Xschem](#l4---creating-symbol-and-exporting-schematic-in-xschem)
     - [L5 - Importing Schematic to Layout and Inverter Layout Steps](#l5---importing-schematic-to-layout-and-inverter-layout-steps)
     - [L6 - Final DRC/LVS Checks](#l6---final-drclvs-checks)
-- [References](#references)
-- [Acknowledgements](#acknowledgements)
 
 ---
 
