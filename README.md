@@ -190,7 +190,6 @@ The metal layers are the **backend layers**. Everything below them is the **fron
 **Other special layers:**
 - **RDL (Redistribution Layer)** — Fabricated by a 3rd party. Used for wafer-level packaging (no wire bonding needed)
 
-![SKY130 Layer Stack](images/Day1_SK1/sky130_layers.png)
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/84ea4264-8a85-463e-93a9-c926f4f8c643" />
 
 #### L4 - Understanding SkyWater PDK - Devices
@@ -230,8 +229,6 @@ MiM (Metal-insulator-Metal) capacitors are available. Many of the capacitor and 
 - All standard devices are **parameterized cells (pcells)** — the designer specifies W and L and the layout is generated automatically
 - Some devices have a **discrete set of approved sizes** rather than continuous parameterization
 
-
-![SKY130 Devices](images/Day1_SK1/sky130_devices.png)
 <img width="681" height="502" alt="image" src="https://github.com/user-attachments/assets/a92c60af-7c0c-47eb-b2f2-219a7bbc4eae" />
 <img width="642" height="537" alt="image" src="https://github.com/user-attachments/assets/76414375-c560-4b27-b31c-6b877c88bbb1" />
 <img width="691" height="397" alt="image" src="https://github.com/user-attachments/assets/5ddc06e1-bc4c-47df-a98b-1f88c3ea0177" />
@@ -327,8 +324,6 @@ The primitive device library is named `sky130_fd_pr` (`pr` = primitives). It con
 | SRAM | Under development by OpenRAM project |
 | NVRAM | Design rules only, full library not yet available |
 
-![SKY130 Libraries](images/Day1_SK1/sky130_libraries.png)
-
 #### L6 - Open-Source Tools and Flows
 
 The file formats in the SkyWater PDK are specifically chosen because they are non-proprietary and usable with open-source tools.
@@ -363,8 +358,6 @@ This means automation can take you part of the way from schematic to layout, but
 **The netlist as common ground for LVS:**
 
 The schematic and layout exist in very different representations. The common format that allows comparison is the **SPICE netlist** — open-source tools all work with SPICE-compatible netlists, making it possible to compare the two sides directly.
-
-![RTL to GDSII Flow](images/Day1_SK1/rtl_to_gdsii_flow.png)
 
 ---
 
