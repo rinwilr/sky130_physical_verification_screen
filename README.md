@@ -414,6 +414,20 @@ make
 sudo make install
 ```
 
+**Verifying installations:**
+
+<img width="1278" height="1337" alt="image" src="https://github.com/user-attachments/assets/27cdc4c8-50d9-42a7-8249-7b89c24929f7" />
+
+<img width="1280" height="1337" alt="image" src="https://github.com/user-attachments/assets/0ea900b3-73da-4939-8b5b-7907ccabd870" />
+
+<img width="1277" height="1336" alt="image" src="https://github.com/user-attachments/assets/c426b621-2519-44d3-84ba-df05700a1130" />
+
+<img width="1280" height="1336" alt="image" src="https://github.com/user-attachments/assets/453080a8-ede0-4a6b-90f4-340b793ea9db" />
+
+---
+
+#### L2 - Creating SKY130 Device Layout in Magic
+
 **Setting up the working directory:**
 
 ```bash
@@ -429,23 +443,26 @@ cp /usr/local/share/pdk/sky130A/libs.tech/magic/sky130A.magicrc .magicrc
 
 cd ../netgen
 cp /usr/local/share/pdk/sky130A/libs.tech/netgen/sky130A_setup.tcl .
+
+cd ../xschem
+xschem
+```
+<img width="1280" height="1338" alt="image" src="https://github.com/user-attachments/assets/6fb6a55e-a45b-4bda-b248-93265e8b0a95" />
+
+```bash
+cd ../mag
+magic
 ```
 
-**Verifying installations:**
-
-![Magic Launch](images/Day1_SK2/magic_launch.png)
-
-![Xschem Launch](images/Day1_SK2/xschem_launch.png)
-
-![Netgen Launch](images/Day1_SK2/netgen_launch.png)
-
-![ngspice Launch](images/Day1_SK2/ngspice_launch.png)
-
----
-
-#### L2 - Creating SKY130 Device Layout in Magic
+<img width="1278" height="1337" alt="image" src="https://github.com/user-attachments/assets/ffc5df1b-5a67-4cce-8ff8-e5b9bab861b2" />
 
 Launched Magic with `magic -d XR` from the `mag/` directory and explored an existing standard cell:
+<img width="1280" height="1341" alt="image" src="https://github.com/user-attachments/assets/c3f98ecc-6870-4a14-af6b-c756333b70e8" />
+
+<img width="1277" height="1340" alt="image" src="https://github.com/user-attachments/assets/f7905419-d21c-4e67-9750-27294ec0129f" />
+<img width="1280" height="1340" alt="image" src="https://github.com/user-attachments/assets/cb4af389-f031-45e9-87fb-d7d25d000be8" />
+<img width="1280" height="1338" alt="image" src="https://github.com/user-attachments/assets/a2489b1e-57e4-44b5-b758-5c3b106a26ed" />
+<img width="1280" height="1340" alt="image" src="https://github.com/user-attachments/assets/247612e7-6d82-4f04-ab14-6b143b3bfaef" />
 
 ```tcl
 % gds read /usr/local/share/pdk/sky130A/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds
@@ -472,7 +489,8 @@ Launched Xschem and built the CMOS inverter schematic by placing components from
 
 Device properties set here in the schematic will automatically reflect in the layout.
 
-![Inverter Schematic](images/Day1_SK2/xschem_inverter_schematic.png)
+<img width="1280" height="1337" alt="image" src="https://github.com/user-attachments/assets/c7554732-e41f-4ecc-9c29-0c78b2d74b43" />
+<img width="1278" height="1337" alt="image" src="https://github.com/user-attachments/assets/67e055d4-1305-499a-aa64-97fcbb8d10ae" />
 
 ---
 
@@ -481,8 +499,11 @@ Device properties set here in the schematic will automatically reflect in the la
 Converted the schematic to a reusable symbol using **Symbol → Make symbol from schematic**. This symbol can now be placed in a testbench.
 
 ![Inverter Symbol](images/Day1_SK2/xschem_inverter_symbol.png)
+<img width="1280" height="1342" alt="image" src="https://github.com/user-attachments/assets/0d37f594-4c5f-45ff-a2d6-0ca49b0cc1e5" />
+<img width="1280" height="1340" alt="image" src="https://github.com/user-attachments/assets/bedb113a-d837-4205-8b1e-735244a1edee" />
 
 Built a testbench (`inverter_tb.sch`) with the inverter symbol, VDD supply (1.8V), input pulse source, and simulation commands:
+<img width="1277" height="1338" alt="image" src="https://github.com/user-attachments/assets/d546ff7d-a5c2-4dfd-86f2-e1fbbf7e8c45" />
 
 ```spice
 .lib /usr/local/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt
